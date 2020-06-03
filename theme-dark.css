@@ -1,0 +1,321 @@
+/* Theme written by Robert Kirk, working off of Maggie Appleton's theme structure
+Contents:
+  General Colours and Font
+  Spacing/Padding/Placement
+  Specific Components
+    Right sidebar
+    Topbar
+    Left sidebar
+    Query component
+    Filter tag buttons
+    Checkmark
+    Linked refernces
+    Page references
+    External Links
+    Bold/Highlight/Italics
+    Autocomplete Popup
+    Block ref Styling
+    Block Embed Container
+    Disable displaying
+      Logo
+      Intercom
+      Help Button
+*/
+/****************** COLOURS AND FONTS **************************/
+/* Setting the font and main text colour */
+h1, h2, h3, h4, h5, h6, div, textarea {
+    font-family: 'Fira Sans';
+    color: #839496 !important;
+}
+
+/* Setting the main background colour*/
+body {
+    background: #002b36
+}
+
+/* Setting some more colours of components*/
+.controls .simple-bullet-outer .simple-bullet-inner {
+    background-color: #93a1a1;
+}
+
+.block-border-left {
+    border-left: 1px solid #073642;
+}
+
+
+/****************** PADDING/PlACEMENT **************************/
+/* Make the display wider (for big screens, this can be adjusted */
+.roam-block-container {
+    max-width: 1300px;
+}
+
+.roam-center > div {
+    padding-right: calc((100% - 1000px) / 2) !important;
+    padding-left: calc((100% - 1000px) / 2) !important;
+}
+
+.roam-block, .rm-block-input, .rm-block-text {
+    max-width: 1000px;
+}
+
+/* Adjusting the font-size*/
+.rm-reference-main .rm-reference-item .rm-block-text {
+    font-size: 90%;
+}
+
+/* Padding things to make the shapes nicer */
+.rm-reference-main .rm-reference-item .controls {
+    margin-left: -1em;
+}
+
+span.rm-page-ref {
+    border-radius: 2px;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+.rm-ref-page-view {
+    padding: 0.1em 0.1em;
+}
+
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page {
+    padding: 6px;
+}
+
+div.flex-v-box.starred-pages-wrapper > div.flex-h-box > span {
+    font-size: 14px;
+    opacity: 80%;
+    letter-spacing: 0.04em;
+}
+
+/****************** SPECIFIC COMPONENTS **************************/
+
+/************************* RIGHT SIDEBAR *************************/
+/* Same as standard background colour */
+#right-sidebar > div {
+    background-color: #002b36;
+}
+
+/* Shadow right sidebar, instead of different background colour */
+#right-sidebar  {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;
+}
+
+/**************************** TOPBAR ****************************/
+/* the topbar should also have the same background, as should the sidebar */
+.roam-topbar, .roam-sidbar-container {
+    background: #002b36
+}
+
+/**** Styling USERNAME to be correct colour ****/
+.bp3-popover-wrapper > .bp3-popover-target > .bp3-button > div {
+    color: #839496;
+}
+
+/* Find or Create search bar */
+#find-or-create-input {
+    background-color: #002b36
+}
+
+.rm-find-or-create-wrapper {
+    flex-basis: 100% !important;
+}
+
+.rm-find-or-create-wrapper .bp3-menu {
+    max-width: none;
+    max-height: 400px;
+}
+
+.rm-find-or-create-wrapper .rm-menu-item {
+    padding: 6px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.rm-find-or-create-wrapper .rm-menu-item .rm-search-title {
+    font-weight: bold;
+}
+
+.rm-find-or-create-wrapper .rm-menu-item .rm-search-title .rm-new-page {
+    color: #0d8050;
+}
+
+.rm-find-or-create-wrapper .rm-menu-item .rm-search-list-item {
+    word-break: break-word;
+    color: #8a9ba8;
+    overflow-wrap: break-spaces;
+    margin-left: -20px;
+}
+
+/* POPUP MENU BUTTONS */
+.bp3-popover-content {
+    background-color: #073642 !important;
+}
+
+.bp3-menu {
+    background-color: #073642;
+    color: #93a1a1;
+}
+
+.bp3-popover-arrow-fill {
+    fill: #073642 !important;
+}
+
+/*********************** LEFT SIDEBAR *************************88*/
+div.roam-sidebar-container.noselect > div > div {
+    font-size: 14px;
+    letter-spacing: 0.03em;
+}
+
+.roam-body .roam-app .roam-sidebar-container {
+    background-color: #002b36;
+}
+
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page, .roam-body .roam-app .roam-sidebar-container > * {
+    opacity: 80%;
+    box-shadow: none;
+}
+
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page:hover, .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .log-button:hover {
+    background: #002b36;
+    color: #93a1a1;
+    opacity: 100%;
+    border-radius: 2px;
+}
+
+/********************* QUERY COMPONENT *******************/
+.rm-query {
+    border-radius: 7px;
+    border-width: 0px;
+    background: #073642;
+}
+
+.rm-query .rm-query-title {
+    background-color: #073642;
+    border-radius: 7px;
+    padding: 0.8em;
+    color: #586e75;
+    font-size: 80%;
+}
+
+/* Applying rm-caret styling to the query component caret */
+.rm-caret {
+    cursor: pointer;
+    transition: all 100ms ease-in 0s;
+    opacity: 0.7;
+}
+
+/****************** FILTER TAG BUTTONS ******************/
+button.bp3-button:not([class*="bpe-intent-"])  {
+    background-color: #073642;
+    color: #839496;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#073642),to(#002b36));
+    background-image: linear-gradient(to bottom,#073642,#002b36);
+}
+
+
+/**** CHECKMARK ****/
+.checkmark {
+    background: #fff;
+    border-color: #268bd2
+}
+
+.check-container input:checked ~ .checkmark {
+    background: #268bd2;
+}
+
+.check-container {
+    padding-right: 2px;
+}
+
+/**** LINKED REFERENCES ****/
+.rm-reference-item {
+    margin-top: 4px;
+    border-radius: 6px;
+    border: 1px solid #e4e9ee;
+    margin-right: 8px;
+    flex: 1 1 100%;
+    word-break: break-word;
+    background-color: #002b36;
+    padding: 4px;
+}
+
+.rm-reference-main > div {
+    background-color: #073642;
+    padding-top: 5px;
+    border-radius: 5px;
+}
+
+/* Unlinked References Strong */
+.rm-reference-main > div > div > div > strong {
+    color: #839496 !important;
+    padding-top: 4px;
+}
+
+/**** PAGE REFERENCES ****/
+.rm-page-ref-link-color {
+    color: #859900;
+    font-weight: 600;
+}
+
+/**** EXTERNAL LINKS ****/
+a {
+    color: #2aa198;
+    font-weight: 500;
+}
+
+/* HIGHLIGHT */
+.roam-highlight {
+    background-color: #dc322f;
+    color: #002b36;
+    border-radius: 3px;
+}
+
+/* BOLD (Including attributes) */
+.roam-block strong {
+    color: #d33682;
+}
+
+/* ITALICS */
+.roam-block em {
+    color: #6c71c4;
+}
+
+/* Autocomplete popup */
+.bp3-elevation-3 {
+    background-color: #073642 !important;
+    color: #93a1a1 !important;
+    max-height: 600px !important;
+}
+
+/************** BLOCK REF STYING **************/
+.rm-block-ref {
+    color: #93a1a1;
+}
+
+/* block embed container */
+.rm-embed-container {
+    background-color: #073642;
+    border-radius: 5px;
+}
+
+.rm-block-ref:hover {
+    background: #073642;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+/* DON'T DISPLAY THE LOGO*/
+#roam-sidebar-logo {
+    display: none
+}
+
+/* hide intercom button */
+.intercom-app, .intercom-launcher-frame, #intercom-container {
+    display: none;
+}
+
+/* Hide help button */
+#buffer {
+    display: none !important;
+}
