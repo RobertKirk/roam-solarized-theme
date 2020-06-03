@@ -243,6 +243,7 @@ button.bp3-button:not([class*="bpe-intent-"])  {
 .rm-reference-main > div {
     background-color: #073642;
     padding-top: 5px;
+    padding-bottom: 5px;
     border-radius: 5px;
 }
 
