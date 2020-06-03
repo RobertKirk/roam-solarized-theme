@@ -232,11 +232,11 @@ button.bp3-button:not([class*="bpe-intent-"])  {
 .rm-reference-item {
     margin-top: 4px;
     border-radius: 6px;
-    border: 1px solid #e4e9ee;
+    border: 1px solid #fdf6e3;
     margin-right: 8px;
     flex: 1 1 100%;
     word-break: break-word;
-    background-color: #f7f9fb;
+    background-color: #fdf6e3;
     padding: 4px;
 }
 
